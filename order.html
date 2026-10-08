@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Summary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📋 Order Summary</h1>
+  </header>
+
+  <main>
+    <div id="order-result"></div>
+    <button onclick="window.location.href='menu.html'">Back to Menu</button>
+  </main>
+
+  <script>
+    // Load order from localStorage
+    const orderData = JSON.parse(localStorage.getItem("currentOrder"));
+    const orderBox = document.getElementById("order-result");
+
+    if (orderData) {
+      let html = `<h3>Table ${orderData.table} Order Summary</h3>`;
+      html += `<table border="1" cellpadding="5" cellspacing="0">
+                 <thead>
+                   <tr>
+                     <th>Drink</th>
+                     <th>Qty</th>
+                     <th>Subtotal (Ks)</th>
+                   </tr>
+                 </thead>
+                 <tbody>`;
+
+      orderData.items.forEach(item => {
+        html += `<tr>
+                   <td>${item.name}</td>
+                   <td>${item.qty}</td>
+                   <td>${item.subtotal}</td>
+                 </tr>`;
+      });
+
+      html += `<tr>
+                 <td colspan="2"><strong>Total</strong></td>
+                 <td><strong>${orderData.total} Ks</strong></td>
+               </tr>`;
+      html += `</tbody></table>`;
+
+      orderBox.innerHTML = html;
+    } else {
+      orderBox.innerHTML = "<p>No order found.</p>";
+    }
+  </script>
+</body>
+</html>
