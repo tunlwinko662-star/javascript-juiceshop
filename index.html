@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <title>Fresh Juice - Home</title>
+  <style>
+    /* Reset */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #222;
+  line-height:1.6;
+  
+  /* Background image + gradient overlay */
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+              url("freshJuice.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #ff6b6b, #f94d6a, #ff9a3c);
+  padding: 20px;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+header h1 {
+  color:#fff;
+  font-size: 2rem;
+  margin-bottom:10px;
+}
+nav a {
+  color: #fff;
+  text-decoration:none;
+  margin:0 12px;
+  font-weight:600;
+  padding:6px 12px;
+  border-radius:8px;
+  transition:0.3s;
+}
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+  text-align:center;
+  padding:40px 20px;
+  height:500px;
+}
+main h2 {
+  font-size: 2rem;
+  color:#333;
+  margin-bottom:10px;
+}
+main p {
+  color:#444;
+  font-size:1.1rem;
+  margin-bottom:30px;
+}
+
+/* Card style for image */
+.juice-card {
+  display:inline-block;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  height:300px;
+  width:600px;
+}
+.juice-card img {
+  width:100%;
+  height:100%;
+  display:block;
+}
+.juice-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top:70px;
+  padding:20px;
+  text-align:center;
+  background: linear-gradient(90deg, #ff6b6b, #f94d6a, #ff9a3c);
+  color:#fff;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🥤 Fresh Juice Shop</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+   <main>
+    <h2>Welcome to Fresh Juice!</h2>
+    <p>သစ်သီးဖျော်ရည် အနံ့အရသာ တစ်ခွက်နဲ့ သန့်ရှင်းစွာ Refresh ဖြစ်စေပါသည် 🍹🍊</p>
+    
+    <div class="juice-card">
+      <img src="freshjuice.jpg" alt="Fresh Juice">
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Fresh Juice Shop</p>
+  </footer>
+</body>
+</html>
